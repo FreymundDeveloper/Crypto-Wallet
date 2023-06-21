@@ -10,4 +10,4 @@ Specifications:
 
 * Database used: SqLite
 
-* Deployment instructions: Heroko
+* Deployment tool: Heroko

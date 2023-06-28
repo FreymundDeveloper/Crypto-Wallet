@@ -5,15 +5,27 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+=begin
+spinner = TTY::Spinner.new("[:spinner] Montando cadastro...")
+spinner.auto_spin 
 
-Coin.create!(
-    description: "Bitcoin",
-    acronym: "BTC",
-    url_image: "https://www.pngplay.com/wp-content/uploads/2/Bitcoin-PNG-Photo-Image.png"
-)
+coins = [
+            {
+                description: "Bitcoin",
+                acronym: "BTC",
+                url_image: "https://www.pngplay.com/wp-content/uploads/2/Bitcoin-PNG-Photo-Image.png"
+            },
+            
+            {
+                description: "Ethereum",
+                acronym: "ETH",
+                url_image: "https://w7.pngwing.com/pngs/368/176/png-transparent-ethereum-cryptocurrency-blockchain-bitcoin-logo-bitcoin-angle-triangle-logo-thumbnail.png"
+            }
+    ]
+    
+coins.each do |coin|
+    Coin.find_or_create_by!(coin)
+end
 
-Coin.create!(
-    description: "Ethereum",
-    acronym: "ETH",
-    url_image: "https://w7.pngwing.com/pngs/368/176/png-transparent-ethereum-cryptocurrency-blockchain-bitcoin-logo-bitcoin-angle-triangle-logo-thumbnail.png"
-)
+spinner.success("Sucesso!") 
+=end

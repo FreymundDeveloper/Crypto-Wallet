@@ -5,8 +5,8 @@ namespace :dev do
       show_spinner("Apagando") { %x(rails db:drop:_unsafe) }
       show_spinner("Criando") { %x(rails db:create) }
       show_spinner("Migrando") { %x(rails db:migrate) }
-      %x(rails dev:add_coins) 
-      %x(rails dev:add_mining_types) 
+      %x(rails dev:add_mining_types)
+      %x(rails dev:add_coins)  
     else
       puts "Ambiente DEV requerido."
     end
@@ -19,13 +19,15 @@ namespace :dev do
               {
                   description: "Bitcoin",
                   acronym: "BTC",
-                  url_image: "https://www.pngplay.com/wp-content/uploads/2/Bitcoin-PNG-Photo-Image.png"
+                  url_image: "https://www.pngplay.com/wp-content/uploads/2/Bitcoin-PNG-Photo-Image.png",
+                  mining_type: MiningType.find_by(acronym: 'PoW')
               },
               
               {
                   description: "Ethereum",
                   acronym: "ETH",
-                  url_image: "https://w7.pngwing.com/pngs/368/176/png-transparent-ethereum-cryptocurrency-blockchain-bitcoin-logo-bitcoin-angle-triangle-logo-thumbnail.png"
+                  url_image: "https://w7.pngwing.com/pngs/368/176/png-transparent-ethereum-cryptocurrency-blockchain-bitcoin-logo-bitcoin-angle-triangle-logo-thumbnail.png",
+                  mining_type: MiningType.all.sample
               }
       ]
       
@@ -53,7 +55,7 @@ namespace :dev do
   private
   
   def show_spinner(msg_start)
-    spinner = TTY::Spinner.new("[:spinner] #{msg_start} DB...")
+    spinner = TTY::Spinner.new("[:spinner] #{msg_start}")
     spinner.auto_spin 
     yield
     spinner.success("Feito!")

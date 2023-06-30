@@ -39,13 +39,13 @@ namespace :dev do
   task add_mining_types: :environment do
     show_spinner("Realizando o cadastro de Minerações...") do
       mining_types = [
-        {nome: "Proof of Work", acronym: "PoW"},
-        {nome: "Proof of Stake", acronym: "PoS"},
-        {nome: "Proof of Capacity", acronym: "PoC"}
+        {description: "Proof of Work", acronym: "PoW"},
+        {description: "Proof of Stake", acronym: "PoS"},
+        {description: "Proof of Capacity", acronym: "PoC"}
       ]
       
-      mining_types.each do |coin|
-        MiningType.find_or_create_by!(mining_types)
+      mining_types.each do |types|
+        MiningType.find_or_create_by!(types)
       end
     end
   end

@@ -1,11 +1,9 @@
-<p>
-    <%= link_to 'PT-BR', root_path(locale: 'pt-BR') %>
-</p>
-<p>
-    <%= link_to 'English', root_path(locale: 'en') %>
-</p>
-<h1>Bem-Vindo</h1>
+<div class="jumbotron">
+    <h1 class="display-4">Bem-Vindo</h1>
+    <p class="lead">Este é o Crypto Wallet, um app para cadastrar e acompanhar a cotação de Cryptos</p>
+    <hr class="my-4">
+    <%= render "menu"%>
+</div>
+
 <p>Idioma Local: <%= t('actual_locate') %></p>
 <h3><strong>Data: </strong><%= I18n.l(Date.today) %></h3>
-
-<%= render "menu"%>

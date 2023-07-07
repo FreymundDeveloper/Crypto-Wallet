@@ -11,6 +11,7 @@
       coin:
         id: Código
         description: Descrição
+        acronym: Sigla
         url_image: URL da Imagem
         mining_type: Tipo Mineração
         mining_type_id: ID do Tipo de Mineração

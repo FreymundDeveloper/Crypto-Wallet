@@ -1,7 +1,22 @@
 pt-BR:
   actual_locate: "PT-BR"
+  welcome: "Bem-Vindo"
+  description: "Este é o Crypto Wallet, um app para cadastrar e acompanhar a cotação de Cryptomoedas."
   hello: "Olá mundo"
+  options: "Selecione uma opção:"
+  confirm: "Certeza?"
   links: 
     edit: "Editar"
     show: "Mostrar"
     delete: "Deletar"
+    new: "Novo"
+    back: "Voltar"
+  new:
+    coin: "Nova Moeda"
+    mining_type: "Novo Tipo de Mineração"
+  editing:
+    coin: "Editar Moeda"
+    mining_type: "Editar Tipo de Mineração"
+  showing:
+    coin: "Mostrar Moeda"
+    mining_type: "Mostrar Tipo de Mineração"

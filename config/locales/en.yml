@@ -31,8 +31,23 @@
 
 en:
   actual_locate: "EUA"
+  welcome: "Welcome"
+  description: "This is Crypto Wallet, an app to register and follow the price of Cryptocurrencies."
   hello: "Hello world"
+  options: "Select an option:"
+  confirm: "Certainty?"
   links: 
     edit: "Edit"
     show: "Show"
     delete: "Delete"
+    new: "New"
+    back: "Back"
+  new:
+    coin: "New Coin"
+    mining_type: "New Mining Type"
+  editing:
+    coin: "Editing Coin"
+    mining_type: "Editing Mining Type"
+  showing:
+    coin: "Showing coin"
+    mining_type: "Showing Mining Type"

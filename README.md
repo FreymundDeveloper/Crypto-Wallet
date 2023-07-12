@@ -8,6 +8,6 @@ Specifications:
 
 * Rails version: 5.2.0
 
-* Database used: SqLite
+* Database used: SqLite and PG
 
 * Deployment tool: Heroko

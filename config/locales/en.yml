@@ -36,6 +36,7 @@ en:
   hello: "Hello world"
   options: "Select an option:"
   confirm: "Certainty?"
+  price: "Quotation in Dollars"
   links: 
     edit: "Edit"
     show: "Show"

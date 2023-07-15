@@ -11,6 +11,13 @@ class CoinsController < ApplicationController
 
   # GET /coins/1 or /coins/1.json
   def show
+    require 'rest-client'
+    require 'json'
+     
+    url = 'https://min-api.cryptocompare.com/data/price?'
+    rest = RestClient.get "#{url}fsym=#{Coin.find(params[:id]).acronym}&tsyms=USD"
+     
+    @price = JSON.parse(rest.body)["USD"]
   end
 
   # GET /coins/new

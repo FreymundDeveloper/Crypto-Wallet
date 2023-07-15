@@ -5,6 +5,7 @@ pt-BR:
   hello: "Olá mundo"
   options: "Selecione uma opção:"
   confirm: "Certeza?"
+  price: "Cotação em Dolar"
   links: 
     edit: "Editar"
     show: "Mostrar"

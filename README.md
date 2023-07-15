@@ -9,5 +9,3 @@ Specifications:
 * Rails version: 5.2.0
 
 * Database used: SqLite
-
-* Deployment tool: Heroko

@@ -9,3 +9,5 @@ Specifications:
 * Rails version: 5.2.0
 
 * Database used: SqLite
+
+* Front-End framework: Bootstrap
